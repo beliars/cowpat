@@ -10,12 +10,15 @@
   <h1>Ok John, tell me what happened</h1>
 
   <div class="main" [ngStyle]="{'height.px': centerHeight}">
-    <p (click)="toDatePage()">The accident took place in</p>
+    <p>The accident took place in</p>
     <form (ngSubmit)="submit()">
-      <!--<ion-item class="input">-->
-      <!--<ion-label>Enter location</ion-label>-->
-      <ion-input type="text" class="input" placeholder="Enter location" ([ngModel])="location"></ion-input>
+
+      <!--<ion-item>-->
+        <!--<ion-label>Date</ion-label>-->
+        <!--<ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" name="date" (click)="onClick($event)" (ionCancel)="onCancel()"></ion-datetime>-->
       <!--</ion-item>-->
+
+      <ion-input type="date" class="input" placeholder="Enter location"></ion-input>
     </form>
   </div>
 </ion-content>

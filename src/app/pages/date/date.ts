@@ -2,15 +2,16 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { Keyboard } from 'ionic-native';
-import { DatePage } from '../date/date';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-date',
+  templateUrl: 'date.html'
 })
-export class HomePage {
+export class DatePage {
   centerHeight: number;
-  location;
+  aaa;
+  
+  myDate = '2017-03-17T08:23:52.687Z';
 
   constructor(public navCtrl: NavController) {
   }
@@ -26,15 +27,13 @@ ngOnInit() {
     });
   }
   
-  toDatePage() {
-    this.navCtrl.push(DatePage);
+  onClick(event) {
+    console.log(444);
+    console.log(event)
   }
   
-  submit(){
-    alert(11111);
-    console.log(22222);
-    
+  onCancel(){
+    console.log(555)
   }
-
-
+  
 }
