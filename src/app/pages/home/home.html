@@ -8,14 +8,21 @@
 
 <ion-content padding>
   <h1>Ok John, tell me what happened</h1>
+  
 
   <div class="main" [ngStyle]="{'height.px': centerHeight}">
-    <p (click)="toDatePage()">The accident took place in</p>
+    <p>The accident took place in
+      <br>
+      <a (click)="toDatePage()">To Date page</a>
+      <br>
+      <a (click)="toScrollPage()">To Scroll page</a>
+      <br>
+      <a (click)="toSelectPage()">To Select page</a>
+    </p>
     <form (ngSubmit)="submit()">
-      <!--<ion-item class="input">-->
-      <!--<ion-label>Enter location</ion-label>-->
-      <ion-input type="text" class="input" placeholder="Enter location" ([ngModel])="location"></ion-input>
-      <!--</ion-item>-->
+      <ion-item class="input">
+        <ion-input type="text" class="input" placeholder="Enter location" ([ngModel])="location"></ion-input>
+      </ion-item>
     </form>
   </div>
 </ion-content>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { Keyboard } from 'ionic-native';
+import { DatePicker } from 'ionic-native';
 
 @Component({
   selector: 'page-date',
@@ -17,19 +18,21 @@ export class DatePage {
   }
 
 ngOnInit() {
-    console.log(window.innerHeight);
-    console.log(window.screen.height);
-    this.centerHeight = window.innerHeight / 3;
+    this.centerHeight = window.innerHeight / 2;
     Keyboard.onKeyboardShow().subscribe(data => {
-      console.log(data);
-      console.log(window.innerHeight);
-      console.log(window.screen.height);
+
     });
   }
   
   onClick(event) {
-    console.log(444);
-    console.log(event)
+    console.log(event);
+    DatePicker.show({
+    date: new Date(),
+    mode: 'date'
+  }).then(
+    date => console.log('Got date: ', date),
+    err => console.log('Error occurred while getting date: ', err)
+  );
   }
   
   onCancel(){
