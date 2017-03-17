@@ -26,19 +26,34 @@ h1{
 }
 
 .main{
-  position: fixed;
-  left:0;
-  top:0;
-  width:100%;
-  padding: 0 10px;
+  //position: fixed;
+  //left:0;
+  //top:0;
+  //width:100%;
+  padding: 0px 10px 0;
+  display:flex;
 
-  p{
-    position:absolute;
-    bottom:20px;
+  .column{
+    align-self: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    max-height:100%;
+    overflow:auto;
   }
 
+  p{
+    //position:absolute;
+    //bottom:20px;
+    //overflow-y:auto;
+    //max-height:calc(100% - 76px);
+  }
+
+  form{
+    align-self:flex-end;
+  }
   .input {
-    position: absolute;
-    bottom:-10px;
+    align-self: flex-end;
+    //position: absolute;
+    //bottom:-10px;
   }
 }
