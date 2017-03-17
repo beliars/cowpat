@@ -8,7 +8,8 @@ import { Keyboard } from 'ionic-native';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  centerHeight;
+  centerHeight: number;
+  aaa;
 
   constructor(public navCtrl: NavController) {
   }
@@ -16,12 +17,16 @@ export class HomePage {
 ngOnInit() {
     console.log(window.innerHeight);
     console.log(window.screen.height);
-    this.centerHeight = window.innerHeight / 2;
+    this.centerHeight = window.innerHeight / 3;
     Keyboard.onKeyboardShow().subscribe(data => {
       console.log(data);
       console.log(window.innerHeight);
       console.log(window.screen.height);
     });
+  }
+  
+  submit(){
+    alert(11111);
   }
 
 
