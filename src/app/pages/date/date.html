@@ -13,15 +13,17 @@
     <div class="column">
       <p>The accident took place in</p>
       <form (ngSubmit)="submit()">
+      <!--<ion-item class="input">
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" name="date" (click)="onClick($event)" (ionCancel)="onCancel()"></ion-datetime>
+      </ion-item>-->
 
-        <!--<ion-item>-->
-          <!--<ion-label>Date</ion-label>-->
-          <!--<ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" name="date" (click)="onClick($event)" (ionCancel)="onCancel()"></ion-datetime>-->
-        <!--</ion-item>-->
-
-        <ion-input type="date" class="input" placeholder="Enter location"></ion-input>
-      </form>
-    </div>
+      <ion-item class="input">
+        <ion-label>Date</ion-label>
+        <ion-input name="date" type="text" (click)="onClick($event)"></ion-input>
+      </ion-item>
+      
+    </form>
   </div>
 </ion-content>
 

@@ -1,0 +1,26 @@
+page-select {
+
+  h1{
+    display: none;
+    position:relative;
+    top:100px;
+  }
+
+  .main{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    padding: 0 10px;
+
+    p{
+      position:absolute;
+      bottom:20px;
+    }
+
+    .input {
+      position: absolute;
+      bottom:-10px;
+    }
+  }
+}

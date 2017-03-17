@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Vestibulum ante ipsum primis in faucibus</h1>
+
+  <div class="main" [ngStyle]="{'height.px': centerHeight}">
+    <p>Praesent sapien massa.</p>
+    <form (ngSubmit)="submit()">
+      <ion-item class="input">
+        <ion-label>Selects</ion-label>
+        <ion-select interface="action-sheet">
+          <ion-option>Bacon</ion-option>
+          <ion-option>Black Olives</ion-option>
+          <ion-option>Extra Cheese</ion-option>
+          <ion-option>Mushrooms</ion-option>
+          <ion-option>Pepperoni</ion-option>
+          <ion-option>Sausage</ion-option>
+        </ion-select>
+      </ion-item>
+    </form>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <!--<ion-toolbar>-->
+    <!--<ion-title>Footer</ion-title>-->
+  <!--</ion-toolbar>-->
+  skip
+</ion-footer>

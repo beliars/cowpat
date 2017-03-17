@@ -22,7 +22,5 @@ export class MyApp {
   }
 
   ngOnInit() {
-    // console.log(window.innerHeight);
-    // console.log(window.screen.height);
   }
 }
