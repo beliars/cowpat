@@ -4,6 +4,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from './pages/home/home';
 
+declare var window: any;
 
 @Component({
   templateUrl: 'app.html'
@@ -18,5 +19,10 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
+  }
+
+  ngOnInit() {
+    // console.log(window.innerHeight);
+    // console.log(window.screen.height);
   }
 }
